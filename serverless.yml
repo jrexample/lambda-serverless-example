@@ -1,0 +1,21 @@
+service: lambda-example
+provider:
+  name: aws
+  runtime: nodejs8.10
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+  greet:
+    handler: handler.greet
+    events:
+      - http:
+          path: /greet/{name}
+          method: get
+          request:
+            parameters:
+              paths:
+                name: true
