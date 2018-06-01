@@ -1,4 +1,5 @@
 # Lambda Serverless Example
+Simple Lambda (AWS) example
 
 ## Built With
 - Node.js
